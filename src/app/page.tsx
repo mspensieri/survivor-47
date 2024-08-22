@@ -4,7 +4,7 @@ import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import Row from "react-bootstrap/Row";
 import Navbar from "react-bootstrap/esm/Navbar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { players } from "./data/players";
 import { weeks } from "./data/weeks";
@@ -14,6 +14,7 @@ import Leaderboard from "./components/leaderboard";
 import Teams from "./components/teams";
 import Scores from "./components/scores";
 import Rules from "./components/rules";
+import WeekSelectorAccordion from "./components/weekSelectorAccordion";
 
 const currentWeek = weeks.length;
 const teamRankings = getTeamRankings(teams);
@@ -38,6 +39,14 @@ const styles = {
 
 function UncontrolledExample() {
   const [reveal, setReveal] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768);
+  const [selectedWeek, setSelectedWeek] = useState(currentWeek - 1);
+
+  useEffect(() => {
+    const handleResize = () => setIsSmallScreen(window.innerWidth < 768);
+
+    window.addEventListener("resize", handleResize);
+  }, []);
 
   function SpoilersButton() {
     return (
@@ -92,12 +101,14 @@ function UncontrolledExample() {
         </SpoilerMask>
       );
     } else {
-      <Scores
-        thisWeekRankings={playerRankings[weekNumber]}
-        lastWeekRankings={playerRankings[weekNumber - 1]}
-        weekNumber={weekNumber}
-        teams={teams}
-      ></Scores>;
+      return (
+        <Scores
+          thisWeekRankings={playerRankings[weekNumber]}
+          lastWeekRankings={playerRankings[weekNumber - 1]}
+          weekNumber={weekNumber}
+          teams={teams}
+        ></Scores>
+      );
     }
   }
 
@@ -112,12 +123,10 @@ function UncontrolledExample() {
     } else {
       return (
         <SpoilerMask>
-          return{" "}
           <Teams
             thisWeekRankings={getTeamRankings(fakeTeams)[0]}
             currentWeek={currentWeek}
           ></Teams>
-          ;
         </SpoilerMask>
       );
     }
@@ -145,51 +154,75 @@ function UncontrolledExample() {
         style={{ paddingLeft: "15px" }}
       >
         <Tab eventKey="leaderboard" title="Leaderboard">
-          <Tabs
-            defaultActiveKey={currentWeek}
-            id="week-selector-leaderboard"
-            className="mb-3"
-          >
-            {[...Array(13)].map((_, index) => {
-              const weekNumber = index;
-              const disabled = currentWeek < weekNumber + 1;
-              return (
-                <Tab
-                  key={weekNumber}
-                  eventKey={weekNumber + 1}
-                  title={`Week ${weekNumber + 1}`}
-                  disabled={disabled}
-                >
-                  {generateLeaderboardForWeek(weekNumber)}
-                </Tab>
-              );
-            })}
-          </Tabs>
+          {isSmallScreen ? (
+            <div>
+              <WeekSelectorAccordion
+                selectedWeek={selectedWeek}
+                setSelectedWeek={setSelectedWeek}
+                currentWeek={currentWeek}
+              ></WeekSelectorAccordion>
+              {generateLeaderboardForWeek(selectedWeek)}
+            </div>
+          ) : (
+            <Tabs
+              activeKey={`${selectedWeek + 1}`}
+              onSelect={(k) => setSelectedWeek(Number(k) - 1)}
+              id="week-selector-leaderboard"
+              className="mb-3"
+            >
+              {[...Array(13)].map((_, index) => {
+                const weekNumber = index;
+                const disabled = currentWeek < weekNumber + 1;
+                return (
+                  <Tab
+                    key={weekNumber}
+                    eventKey={weekNumber + 1}
+                    title={`Week ${weekNumber + 1}`}
+                    disabled={disabled}
+                  >
+                    {generateLeaderboardForWeek(weekNumber)}
+                  </Tab>
+                );
+              })}
+            </Tabs>
+          )}
         </Tab>
         <Tab eventKey="teams" title="Teams">
           {generateTeams()}
         </Tab>
         <Tab eventKey="players" title="Players">
-          <Tabs
-            defaultActiveKey={currentWeek}
-            id="week-selector-players"
-            className="mb-3"
-          >
-            {[...Array(13)].map((_, index) => {
-              const weekNumber = index;
-              const disabled = currentWeek < weekNumber + 1;
-              return (
-                <Tab
-                  key={weekNumber}
-                  eventKey={weekNumber + 1}
-                  title={`Week ${weekNumber + 1}`}
-                  disabled={disabled}
-                >
-                  {generatePlayerScoresForWeek(weekNumber)}
-                </Tab>
-              );
-            })}
-          </Tabs>
+          {isSmallScreen ? (
+            <div>
+              <WeekSelectorAccordion
+                selectedWeek={selectedWeek}
+                setSelectedWeek={setSelectedWeek}
+                currentWeek={currentWeek}
+              ></WeekSelectorAccordion>
+              {generatePlayerScoresForWeek(selectedWeek)}
+            </div>
+          ) : (
+            <Tabs
+              activeKey={`${selectedWeek + 1}`}
+              onSelect={(k) => setSelectedWeek(Number(k) - 1)}
+              id="week-selector-players"
+              className="mb-3"
+            >
+              {[...Array(13)].map((_, index) => {
+                const weekNumber = index;
+                const disabled = currentWeek < weekNumber + 1;
+                return (
+                  <Tab
+                    key={weekNumber}
+                    eventKey={weekNumber + 1}
+                    title={`Week ${weekNumber + 1}`}
+                    disabled={disabled}
+                  >
+                    {generatePlayerScoresForWeek(weekNumber)}
+                  </Tab>
+                );
+              })}
+            </Tabs>
+          )}
         </Tab>
         <Tab eventKey="rules" title="Rules" className="rules">
           <Rules></Rules>

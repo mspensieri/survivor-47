@@ -14,6 +14,19 @@
     --bs-link-color: #faece5;
     --link-color-dark: #b0aca2;
     --bs-tertiary-bg-rgb:rgb(57, 3, 1);
+    
+    .accordion {
+        --bs-accordion-color: var(--bs-link-color);
+        --bs-accordion-btn-color: var(--bs-link-color);
+        --bs-accordion-active-color: var(--bs-link-color);
+        --bs-accordion-active-bg: var(--bs-body-bg);
+        --bs-accordion-btn-focus-box-shadow: none;
+        margin-bottom: 20px;
+
+        --bs-accordion-btn-icon:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23faece5' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
+
+        --bs-accordion-btn-active-icon:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23faece5' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
+    }
 
     .navbar-brand {
         padding-left: 8px;
@@ -23,7 +36,7 @@
 
     .nav {
         --bs-nav-link-color: var(--link-color-dark);
-        --bs-nav-link-active-color: #var(--link-color-dark);
+        --bs-nav-link-active-color: var(--link-color-dark);
         --bs-nav-link-disabled-color: #ffffff18;
         --bs-nav-link-hover-color: var(--bs-link-color);
     }
@@ -64,5 +77,9 @@
         width: 100%;
         height: 100%;
         backdrop-filter: blur(2px);
+    }
+
+    .btn-link {
+        --bs-link-hover-color: var(--link-color-dark);
     }
 }
