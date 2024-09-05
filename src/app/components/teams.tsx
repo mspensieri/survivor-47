@@ -16,9 +16,17 @@ const styles = {
   cardNumber: {
     fontSize: "80pt",
   },
+  accolades: {
+    fontSize: "15pt",
+    marginTop: "15px",
+    marginBottom: "15px",
+  },
   playerEliminated: {
     textDecoration: "line-through",
     color: "red",
+  },
+  card: {
+    minHeight: "270px",
   },
 };
 
@@ -32,14 +40,28 @@ class Teams extends React.Component<{
     return (
       <Row>
         {...thisWeekRankings.map((teamScore) => {
+          let accoladesComponent;
+
+          if (teamScore.team.accolades) {
+            const { first, second, third } = teamScore.team.accolades;
+            accoladesComponent = (
+              <div style={styles.accolades}>
+                {first && <Card.Text>🥇 Season {first.join(", ")}</Card.Text>}
+                {second && <Card.Text>🥈 Season {second.join(", ")}</Card.Text>}
+                {third && <Card.Text>🥉 Season {third.join(", ")}</Card.Text>}
+              </div>
+            );
+          }
+
           return (
             <Col key={teamScore.team.name} xs={12} sm={6} md={4} lg={3}>
-              <Card className="text-center">
+              <Card className="text-center" style={styles.card}>
                 <Card.Body>
                   <Card.Title style={styles.cardNumber}>
                     {teamScore.rank === 0 ? "👑" : `#${teamScore.rank + 1}`}{" "}
                   </Card.Title>
                   <Card.Title>{teamScore.team.name}</Card.Title>
+                  {accoladesComponent}
                   {...[...teamScore.team.players]
                     .sort(
                       (a, b) =>

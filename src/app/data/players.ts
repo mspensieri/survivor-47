@@ -1,24 +1,24 @@
 export type PlayerStatus = "active" | "eliminated" | "jury" | "winner";
 
 export enum PlayerKeys {
-  JEM = "JEM",
-  BEN = "BEN",
-  JESS = "JESS",
-  BHANU = "BHANU",
-  KENZIE = "KENZIE",
-  CHARLIE = "CHARLIE",
-  LIZ = "LIZ",
-  JELINSKY = "JELINSKY",
-  MARIA = "MARIA",
-  HUNTER = "HUNTER",
-  MORIAH = "MORIAH",
-  Q = "Q",
-  SODA = "SODA",
-  RANDEN = "RANDEN",
-  TIFFANY = "TIFFANY",
-  TEVIN = "TEVIN",
-  VENUS = "VENUS",
-  TIM = "TIM",
+  AYSHA = "AYSHA",
+  GENEVIEVE = "GENEVIEVE",
+  TEENY = "TEENY",
+  SIERRA = "SIERRA",
+  RACHEL = "RACHEL",
+  ANIKA = "ANIKA",
+  ROME = "ROME",
+  SOL = "SOL",
+  KISHAN = "KISHAN",
+  JON = "JON",
+  SAM = "SAM",
+  ANDY = "ANDY",
+  TIYANA = "TIYANA",
+  SUE = "SUE",
+  CAROLINE = "CAROLINE",
+  TK = "TK",
+  GABE = "GABE",
+  KYLE = "KYLE",
 }
 
 export type Player = {
@@ -29,112 +29,95 @@ export type Player = {
 };
 
 export const PLAYERS: Record<PlayerKeys, Player> = {
-  [PlayerKeys.JEM]: {
-    key: PlayerKeys.JEM,
-    name: "Jem",
-    status: "eliminated",
-    eliminatedWeek: 4,
+  [PlayerKeys.AYSHA]: {
+    key: PlayerKeys.AYSHA,
+    name: "Aysha",
+    status: "active",
   },
-  [PlayerKeys.BEN]: {
-    key: PlayerKeys.BEN,
-    name: "Ben",
-    status: "eliminated",
-    eliminatedWeek: 12,
+  [PlayerKeys.GENEVIEVE]: {
+    key: PlayerKeys.GENEVIEVE,
+    name: "Genevieve",
+    status: "active",
   },
-  [PlayerKeys.JESS]: {
-    key: PlayerKeys.JESS,
-    name: "Jess",
-    status: "eliminated",
-    eliminatedWeek: 1,
+  [PlayerKeys.TEENY]: {
+    key: PlayerKeys.TEENY,
+    name: "Teeny",
+    status: "active",
   },
-  [PlayerKeys.BHANU]: {
-    key: PlayerKeys.BHANU,
-    name: "Bhanu",
-    status: "eliminated",
-    eliminatedWeek: 3,
+  [PlayerKeys.SIERRA]: {
+    key: PlayerKeys.SIERRA,
+    name: "Sierra",
+    status: "active",
   },
-  [PlayerKeys.KENZIE]: {
-    key: PlayerKeys.KENZIE,
-    name: "Kenzie",
-    status: "winner",
+  [PlayerKeys.RACHEL]: {
+    key: PlayerKeys.RACHEL,
+    name: "Rachel",
+    status: "active",
   },
-  [PlayerKeys.CHARLIE]: {
-    key: PlayerKeys.CHARLIE,
-    name: "Charlie",
-    status: "eliminated",
-    eliminatedWeek: 12,
+  [PlayerKeys.ANIKA]: {
+    key: PlayerKeys.ANIKA,
+    name: "Anika",
+    status: "active",
   },
-  [PlayerKeys.LIZ]: {
-    key: PlayerKeys.LIZ,
-    name: "Liz",
-    status: "jury",
-    eliminatedWeek: 12,
+  [PlayerKeys.ROME]: {
+    key: PlayerKeys.ROME,
+    name: "Rome",
+    status: "active",
   },
-  [PlayerKeys.JELINSKY]: {
-    key: PlayerKeys.JELINSKY,
-    name: "Jelinsky",
-    status: "eliminated",
-    eliminatedWeek: 0,
+  [PlayerKeys.SOL]: {
+    key: PlayerKeys.SOL,
+    name: "Sol",
+    status: "active",
   },
-  [PlayerKeys.MARIA]: {
-    key: PlayerKeys.MARIA,
-    name: "Maria",
-    status: "jury",
-    eliminatedWeek: 12,
+  [PlayerKeys.KISHAN]: {
+    key: PlayerKeys.KISHAN,
+    name: "Kishan",
+    status: "active",
   },
-  [PlayerKeys.HUNTER]: {
-    key: PlayerKeys.HUNTER,
-    name: "Hunter",
-    status: "jury",
-    eliminatedWeek: 8,
+  [PlayerKeys.JON]: {
+    key: PlayerKeys.JON,
+    name: "Jon",
+    status: "active",
   },
-  [PlayerKeys.MORIAH]: {
-    key: PlayerKeys.MORIAH,
-    name: "Moriah",
-    status: "eliminated",
-    eliminatedWeek: 5,
+  [PlayerKeys.SAM]: {
+    key: PlayerKeys.SAM,
+    name: "Sam",
+    status: "active",
   },
-  [PlayerKeys.Q]: {
-    key: PlayerKeys.Q,
-    name: "Q",
-    status: "jury",
-    eliminatedWeek: 11,
+  [PlayerKeys.ANDY]: {
+    key: PlayerKeys.ANDY,
+    name: "Andy",
+    status: "active",
   },
-  [PlayerKeys.SODA]: {
-    key: PlayerKeys.SODA,
-    name: "Soda",
-    status: "jury",
-    eliminatedWeek: 6,
+  [PlayerKeys.TIYANA]: {
+    key: PlayerKeys.TIYANA,
+    name: "Tiyana",
+    status: "active",
   },
-  [PlayerKeys.RANDEN]: {
-    key: PlayerKeys.RANDEN,
-    name: "Randen",
-    status: "eliminated",
-    eliminatedWeek: 2,
+  [PlayerKeys.SUE]: {
+    key: PlayerKeys.SUE,
+    name: "Sue",
+    status: "active",
   },
-  [PlayerKeys.TIFFANY]: {
-    key: PlayerKeys.TIFFANY,
-    name: "Tiffany",
-    status: "jury",
-    eliminatedWeek: 9,
+  [PlayerKeys.CAROLINE]: {
+    key: PlayerKeys.CAROLINE,
+    name: "Caroline",
+    status: "active",
   },
-  [PlayerKeys.TEVIN]: {
-    key: PlayerKeys.TEVIN,
-    name: "Tevin",
-    status: "jury",
-    eliminatedWeek: 7,
+  [PlayerKeys.TK]: {
+    key: PlayerKeys.TK,
+    name: "TK",
+    status: "active",
   },
-  [PlayerKeys.VENUS]: {
-    key: PlayerKeys.VENUS,
-    name: "Venus",
-    status: "jury",
-    eliminatedWeek: 10,
+  [PlayerKeys.GABE]: {
+    key: PlayerKeys.GABE,
+    name: "Gabe",
+    status: "active",
   },
-  [PlayerKeys.TIM]: {
-    key: PlayerKeys.TIM,
-    name: "Tim",
-    status: "eliminated",
-    eliminatedWeek: 6,
+  [PlayerKeys.KYLE]: {
+    key: PlayerKeys.KYLE,
+    name: "Kyle",
+    status: "active",
   },
 };
 

@@ -14,6 +14,9 @@ const styles = {
     fontSize: "10pt",
     color: "red",
   },
+  medals: {
+    fontSize: "17pt",
+  },
 };
 
 class Leaderboard extends React.Component<{
@@ -84,10 +87,33 @@ class Leaderboard extends React.Component<{
               rank = <td>#{thisWeekScore.rank + 1}</td>;
             }
 
+            let medals;
+            if (thisWeekScore.team.accolades) {
+              const { first, second, third } = thisWeekScore.team.accolades;
+
+              const medalsString = [
+                first && "🥇".repeat(first.length),
+                second && "🥈".repeat(second.length),
+                third && "🥉".repeat(third.length),
+              ]
+                .filter((a) => a)
+                .join("");
+
+              medals = (
+                <span>
+                  {" "}
+                  (<span style={styles.medals}>{medalsString}</span>)
+                </span>
+              );
+            }
+
             return (
               <tr key={thisWeekScore.team.name}>
                 {rank}
-                <td>{thisWeekScore.team.name}</td>
+                <td>
+                  {thisWeekScore.team.name}
+                  {medals}
+                </td>
                 <td>{getScore()}</td>
               </tr>
             );

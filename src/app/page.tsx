@@ -7,7 +7,7 @@ import Navbar from "react-bootstrap/esm/Navbar";
 import { useEffect, useState } from "react";
 
 import { players } from "./data/players";
-import { weeks } from "./data/weeks";
+import { airDates, weeks } from "./data/weeks";
 import { getTeamRankings, getPlayerRankings } from "./data/rankings";
 import { teams, fakeTeams } from "./data/teams";
 import Leaderboard from "./components/leaderboard";
@@ -23,7 +23,7 @@ const playerRankings = getPlayerRankings(players);
 const styles = {
   spoilersButton: {
     color: "white",
-    backgroundColor: "rgb(57, 3, 1)",
+    backgroundColor: "rgb(110, 4, 1)",
     width: "200px",
     height: "50px",
     border: "1px solid white",
@@ -177,7 +177,7 @@ function UncontrolledExample() {
                   <Tab
                     key={weekNumber}
                     eventKey={weekNumber + 1}
-                    title={`Week ${weekNumber + 1}`}
+                    title={airDates[weekNumber]}
                     disabled={disabled}
                   >
                     {generateLeaderboardForWeek(weekNumber)}
@@ -214,7 +214,7 @@ function UncontrolledExample() {
                   <Tab
                     key={weekNumber}
                     eventKey={weekNumber + 1}
-                    title={`Week ${weekNumber + 1}`}
+                    title={airDates[weekNumber]}
                     disabled={disabled}
                   >
                     {generatePlayerScoresForWeek(weekNumber)}

@@ -3,6 +3,7 @@
 import React from "react";
 import Accordion from "react-bootstrap/esm/Accordion";
 import Button from "react-bootstrap/esm/Button";
+import { airDates } from "../data/weeks";
 
 const styles = {
   weekButtonContainer: {
@@ -60,7 +61,7 @@ class WeekSelectorAccordion extends React.Component<
         }}
       >
         <Accordion.Item eventKey="0">
-          <Accordion.Header>Week {selectedWeek + 1}</Accordion.Header>
+          <Accordion.Header>{airDates[selectedWeek]}</Accordion.Header>
           <Accordion.Body>
             {[...Array(13)].map((_, index) => {
               const weekNumber = index;
@@ -89,7 +90,7 @@ class WeekSelectorAccordion extends React.Component<
                     }}
                     disabled={disabled}
                   >
-                    Week {weekNumber + 1}
+                    {airDates[weekNumber]}
                   </Button>
                 </div>
               );
