@@ -39,13 +39,15 @@ const styles = {
 
 function UncontrolledExample() {
   const [reveal, setReveal] = useState(false);
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768);
+  const [isSmallScreen, setIsSmallScreen] = useState(true);
   const [selectedWeek, setSelectedWeek] = useState(currentWeek - 1);
 
   useEffect(() => {
-    const handleResize = () => setIsSmallScreen(window.innerWidth < 768);
+    setIsSmallScreen(global.window.innerWidth < 768);
 
-    window.addEventListener("resize", handleResize);
+    const handleResize = () => setIsSmallScreen(global.window.innerWidth < 768);
+
+    global.window.addEventListener("resize", handleResize);
   }, []);
 
   function SpoilersButton() {
