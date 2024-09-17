@@ -36,99 +36,53 @@ const {
 export const teams: Array<Team> = [
   {
     name: "First Time in Fiji",
-    winner: AYSHA,
-    players: [],
-  },
-  {
-    name: "Momma J",
-    winner: AYSHA,
-    players: [],
+    winner: SOL,
+    players: [SOL, CAROLINE, TEENY, TK, ANIKA, ANDY],
   },
   {
     name: "Sandy's Spynest",
     accolades: {
       second: [46],
     },
-    winner: AYSHA,
-    players: [],
+    winner: SIERRA,
+    players: [SIERRA, ANIKA, GABE, ROME, TK, AYSHA],
   },
   {
-    name: "4BlackCats",
-    winner: AYSHA,
-    players: [],
+    name: "4blackcats",
+    winner: GENEVIEVE,
+    players: [GENEVIEVE, ROME, TIYANA, GABE, KYLE, SIERRA],
   },
   {
     name: "Leafs Nation",
     accolades: {
       third: [46],
     },
-    winner: AYSHA,
-    players: [],
+    winner: GENEVIEVE,
+    players: [GENEVIEVE, CAROLINE, KYLE, SIERRA, GABE, ANDY],
   },
   {
     name: "Wendy's Chickens",
-    winner: AYSHA,
-    players: [],
+    winner: ROME,
+    players: [ROME, ANIKA, KYLE, SUE, KISHAN, ANDY],
   },
   {
-    name: "Dean's M List (Money Team)",
+    name: "Dean’s T and A Team",
     accolades: {
       first: [44],
       third: [45],
     },
-    winner: AYSHA,
-    players: [],
+    winner: TK,
+    players: [TK, TIYANA, TEENY, ANDY, ANIKA, AYSHA],
   },
   {
-    name: "Hang in there, Jeremy!",
-    winner: AYSHA,
-    players: [],
-  },
-  {
-    name: "Challenge Beasts",
-    accolades: {
-      first: [45],
-    },
-    winner: AYSHA,
-    players: [],
-  },
-  {
-    name: "Shot in the Dark",
-    winner: AYSHA,
-    players: [],
+    name: "Charlie's Angels",
+    winner: ANDY,
+    players: [ANDY, KYLE, GENEVIEVE, RACHEL, KISHAN, TK],
   },
   {
     name: "Jeff's Dimples",
-    winner: AYSHA,
-    players: [],
-  },
-  {
-    name: "NO SPOILERS",
-    accolades: {
-      third: [45],
-    },
-    winner: AYSHA,
-    players: [],
-  },
-  {
-    name: "LIVIN'",
-    winner: AYSHA,
-    players: [],
-  },
-  {
-    name: "With You 100%",
-    winner: AYSHA,
-    players: [],
-  },
-  {
-    name: "Emily & Charcuterie",
-    winner: AYSHA,
-    players: [],
-  },
-  {
-    name: "Petty Woman",
-    winner: AYSHA,
-    players: [],
+    winner: ANDY,
+    players: [ANDY, ROME, TK, KYLE, TEENY, TIYANA],
   },
   {
     name: "Truth Kamikazee",
@@ -136,15 +90,57 @@ export const teams: Array<Team> = [
       second: [45],
     },
     winner: AYSHA,
-    players: [],
+    players: [AYSHA, RACHEL, SAM, SIERRA, TK, KYLE],
   },
   {
     name: "Muscle Mania",
-    winner: AYSHA,
-    players: [],
+    winner: TK,
+    players: [TK, ANDY, CAROLINE, TIYANA, SAM, SOL],
   },
   {
-    name: "Great Vibes",
+    name: "Mermaid Dragon",
+    winner: AYSHA,
+    players: [JON, GENEVIEVE, SIERRA, TEENY, SOL, ANDY],
+  },
+  {
+    name: "Fiji Kokoda",
+    accolades: {
+      first: [46],
+      second: [44],
+    },
+    winner: KYLE,
+    players: [KYLE, GABE, KISHAN, SOL, SAM, GENEVIEVE],
+  },
+  {
+    name: "Team Outwit",
+    winner: CAROLINE,
+    players: [CAROLINE, KYLE, GENEVIEVE, SAM, SOL, TEENY],
+  },
+  {
+    name: "Frank has Foot Fungus",
+    winner: RACHEL,
+    players: [RACHEL, TEENY, SOL, TK, SAM, KYLE],
+  },
+  {
+    name: "Jeff's Six Pack",
+    winner: ANDY,
+    players: [ANDY, JON, GENEVIEVE, KYLE, SIERRA, SOL],
+  },
+  {
+    name: "Here for Friendship",
+    winner: KYLE,
+    players: [KYLE, JON, KISHAN, SUE, TIYANA, TK],
+  },
+  {
+    name: "TEAM JO",
+    winner: ROME,
+    players: [ROME, SAM, GENEVIEVE, RACHEL, SOL, TIYANA],
+  },
+  {
+    name: "NO SPOILERS",
+    accolades: {
+      third: [45],
+    },
     winner: AYSHA,
     players: [],
   },
@@ -157,46 +153,10 @@ export const teams: Array<Team> = [
     players: [],
   },
   {
-    name: "S.A.D",
-    winner: AYSHA,
-    players: [],
-  },
-  {
-    name: "SIGA SLAY",
-    winner: AYSHA,
-    players: [],
-  },
-  {
-    name: "Fiji Kokoda",
+    name: "Challenge Beasts",
     accolades: {
-      first: [46],
-      second: [44],
+      first: [45],
     },
-    winner: AYSHA,
-    players: [],
-  },
-  {
-    name: "Jo's J-List",
-    winner: AYSHA,
-    players: [],
-  },
-  {
-    name: "Clyde's Castaways",
-    winner: AYSHA,
-    players: [],
-  },
-  {
-    name: "Louis for President",
-    winner: AYSHA,
-    players: [],
-  },
-  {
-    name: "Barely Hanging in There!",
-    winner: AYSHA,
-    players: [],
-  },
-  {
-    name: "Paooooooola",
     winner: AYSHA,
     players: [],
   },

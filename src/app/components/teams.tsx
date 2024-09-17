@@ -18,8 +18,15 @@ const styles = {
   },
   accolades: {
     fontSize: "15pt",
-    marginTop: "15px",
+    paddingTop: "10px",
+    paddingBottom: "10px",
     marginBottom: "15px",
+    marginTop: "15px",
+    backgroundColor: "#facf8b",
+    borderRadius: "10px",
+    width: "75%",
+    marginLeft: "auto",
+    marginRight: "auto",
   },
   playerEliminated: {
     textDecoration: "line-through",
