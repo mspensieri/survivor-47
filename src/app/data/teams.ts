@@ -66,7 +66,7 @@ export const teams: Array<Team> = [
     players: [ROME, ANIKA, KYLE, SUE, KISHAN, ANDY],
   },
   {
-    name: "Dean’s T and A Team",
+    name: "Dean's T and A Team",
     accolades: {
       first: [44],
       third: [45],
@@ -99,7 +99,7 @@ export const teams: Array<Team> = [
   },
   {
     name: "Mermaid Dragon",
-    winner: AYSHA,
+    winner: JON,
     players: [JON, GENEVIEVE, SIERRA, TEENY, SOL, ANDY],
   },
   {
@@ -137,29 +137,114 @@ export const teams: Array<Team> = [
     players: [ROME, SAM, GENEVIEVE, RACHEL, SOL, TIYANA],
   },
   {
-    name: "NO SPOILERS",
-    accolades: {
-      third: [45],
-    },
-    winner: AYSHA,
-    players: [],
-  },
-  {
-    name: "UNDER-DOGS",
+    name: "UNDERDOGS",
     accolades: {
       second: [44],
     },
-    winner: AYSHA,
-    players: [],
+    winner: SUE,
+    players: [SUE, KISHAN, AYSHA, SAM, JON, ANIKA],
   },
   {
     name: "Challenge Beasts",
     accolades: {
       first: [45],
     },
-    winner: AYSHA,
-    players: [],
+    winner: KYLE,
+    players: [KYLE, SAM, ANDY, TK, ANIKA, TEENY],
   },
+  {
+    name: "BIG DUCK",
+    winner: SIERRA,
+    players: [SIERRA, TEENY, KYLE, TK, SUE, ANDY],
+  },
+  {
+    name: "Survivor 2025",
+    winner: TK,
+    players: [TK, ROME, ANIKA, GABE, AYSHA, CAROLINE],
+  },
+  {
+    name: "Boinko's Brats",
+    winner: TEENY,
+    players: [TEENY, TIYANA, TK, GABE, KISHAN, SIERRA],
+  },
+  {
+    name: "Lemay",
+    winner: RACHEL,
+    players: [RACHEL, SIERRA, ROME, KYLE, GABE, CAROLINE],
+  },
+  {
+    name: "Ancient Voices",
+    winner: TIYANA,
+    players: [TIYANA, ANDY, KISHAN, SUE, AYSHA, TK],
+  },
+  {
+    name: "Play Your Idol",
+    winner: KYLE,
+    players: [KYLE, SIERRA, ANDY, SOL, CAROLINE, TEENY],
+  },
+  {
+    name: "Come On In Guys",
+    winner: RACHEL,
+    players: [RACHEL, TEENY, KYLE, TK, ANDY, CAROLINE],
+  },
+  {
+    name: "Ogatally Devotes",
+    winner: SAM,
+    players: [SAM, KISHAN, TEENY, ANDY, AYSHA, TIYANA],
+  },
+  {
+    name: "Got Nothin' For Ya",
+    winner: TK,
+    players: [TK, ANIKA, GENEVIEVE, KYLE, JON, SOL],
+  },
+  {
+    name: "The Noob",
+    winner: TIYANA,
+    players: [TIYANA, KYLE, TK, AYSHA, TEENY, SAM],
+  },
+  {
+    name: "Clyde's Castaways",
+    winner: SOL,
+    players: [SOL, ANDY, KYLE, TK, TEENY, TIYANA],
+  },
+  {
+    name: "TRACKS",
+    winner: ROME,
+    players: [ROME, TIYANA, KISHAN, SUE, CAROLINE, ANIKA],
+  },
+  {
+    name: "LIVIN'",
+    winner: TK,
+    players: [TK, GENEVIEVE, CAROLINE, ROME, SIERRA, ANDY],
+  },
+  {
+    name: "With You 100%",
+    winner: KYLE,
+    players: [KYLE, TK, ANIKA, CAROLINE, SOL, RACHEL],
+  },
+  {
+    name: "JSpenny",
+    winner: KYLE,
+    players: [KYLE, SOL, TIYANA, TEENY, JON, ANDY],
+  },
+  {
+    name: "House of Vidmar",
+    winner: CAROLINE,
+    players: [CAROLINE, SIERRA, SAM, KYLE, TK, TIYANA],
+  },
+  {
+    name: "Fight For it?",
+    winner: KYLE,
+    players: [KYLE, ANDY, GENEVIEVE, KISHAN, TEENY, SOL],
+  },
+  // {
+  //   name: "NO SPOILERS",
+  //   accolades: {
+  //     third: [45],
+  //   },
+  //   winner: AYSHA,
+  //   players: [],
+  // },
 ];
 
 export function computeTeamScore(team: Team, weekNumber: number) {

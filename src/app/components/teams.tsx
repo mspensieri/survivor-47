@@ -21,7 +21,7 @@ const styles = {
     paddingTop: "10px",
     paddingBottom: "10px",
     marginBottom: "15px",
-    marginTop: "15px",
+    marginTop: "-10px",
     backgroundColor: "#facf8b",
     borderRadius: "10px",
     width: "75%",
@@ -34,6 +34,9 @@ const styles = {
   },
   card: {
     minHeight: "270px",
+  },
+  teamName: {
+    marginBottom: "20px",
   },
 };
 
@@ -67,7 +70,9 @@ class Teams extends React.Component<{
                   <Card.Title style={styles.cardNumber}>
                     {teamScore.rank === 0 ? "👑" : `#${teamScore.rank + 1}`}{" "}
                   </Card.Title>
-                  <Card.Title>{teamScore.team.name}</Card.Title>
+                  <Card.Title style={styles.teamName}>
+                    {teamScore.team.name}
+                  </Card.Title>
                   {accoladesComponent}
                   {...[...teamScore.team.players]
                     .sort(
