@@ -141,8 +141,8 @@ export const teams: Array<Team> = [
     accolades: {
       second: [44],
     },
-    winner: SUE,
-    players: [SUE, KISHAN, AYSHA, SAM, JON, ANIKA],
+    winner: JON,
+    players: [JON, SUE, KISHAN, AYSHA, SAM, ANIKA],
   },
   {
     name: "Challenge Beasts",
@@ -168,7 +168,7 @@ export const teams: Array<Team> = [
     players: [TEENY, TIYANA, TK, GABE, KISHAN, SIERRA],
   },
   {
-    name: "Lemay",
+    name: "Q's 6",
     winner: RACHEL,
     players: [RACHEL, SIERRA, ROME, KYLE, GABE, CAROLINE],
   },
@@ -237,14 +237,29 @@ export const teams: Array<Team> = [
     winner: KYLE,
     players: [KYLE, ANDY, GENEVIEVE, KISHAN, TEENY, SOL],
   },
-  // {
-  //   name: "NO SPOILERS",
-  //   accolades: {
-  //     third: [45],
-  //   },
-  //   winner: AYSHA,
-  //   players: [],
-  // },
+  {
+    name: "NO SPOILERS",
+    accolades: {
+      third: [45],
+    },
+    winner: CAROLINE,
+    players: [CAROLINE, JON, GENEVIEVE, KYLE, SOL, SIERRA],
+  },
+  {
+    name: "AA Team",
+    winner: KYLE,
+    players: [KYLE, CAROLINE, SOL, JON, SUE, TEENY],
+  },
+  {
+    name: "Jer-iatrics",
+    winner: SUE,
+    players: [SUE, SOL, JON, RACHEL, GENEVIEVE, AYSHA],
+  },
+  {
+    name: "S.A.D",
+    winner: KYLE,
+    players: [KYLE, TK, ANDY, SIERRA, TEENY, SOL],
+  },
 ];
 
 export function computeTeamScore(team: Team, weekNumber: number) {
