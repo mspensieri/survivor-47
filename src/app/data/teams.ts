@@ -252,8 +252,8 @@ export const teams: Array<Team> = [
   },
   {
     name: "Jer-iatrics",
-    winner: SUE,
-    players: [SUE, SOL, JON, RACHEL, GENEVIEVE, AYSHA],
+    winner: TIYANA,
+    players: [TIYANA, JON, GENEVIEVE, AYSHA, TK, KYLE],
   },
   {
     name: "S.A.D",
