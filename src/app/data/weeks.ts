@@ -25,7 +25,26 @@ export const airDates = [
   "Dec 11",
 ];
 
-export const weeks: Array<Partial<Record<PlayerKeys, Points>>> = [{}];
+export const weeks: Array<Partial<Record<PlayerKeys, Points>>> = [
+  {
+    AYSHA: { teamImmunity: 1 },
+    GENEVIEVE: { teamImmunity: 1 },
+    KISHAN: { teamImmunity: 1 },
+    ROME: { teamImmunity: 1, advantage: 1 },
+    SOL: { teamImmunity: 1 },
+    TEENY: { teamImmunity: 1 },
+    CAROLINE: { teamImmunity: 1 },
+    GABE: {
+      advantage: 2,
+      idolFound: 2,
+      teamImmunity: 1,
+    },
+    KYLE: { teamImmunity: 1 },
+    SUE: { teamImmunity: 1 },
+    TK: { teamImmunity: 1 },
+    TIYANA: { teamImmunity: 1 },
+  },
+];
 
 export function computePlayerScore(
   player: Player,
