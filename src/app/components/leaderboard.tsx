@@ -17,6 +17,13 @@ const styles = {
   medals: {
     fontSize: "17pt",
   },
+  captain: {
+    fontSize: "8pt",
+    color: "#84827a",
+  },
+  row: {
+    lineHeight: "1",
+  },
 };
 
 class Leaderboard extends React.Component<{
@@ -110,9 +117,13 @@ class Leaderboard extends React.Component<{
             return (
               <tr key={thisWeekScore.team.name}>
                 {rank}
-                <td>
+                <td style={styles.row}>
                   {thisWeekScore.team.name}
                   {medals}
+                  <br />
+                  <span style={styles.captain}>
+                    {thisWeekScore.team.captain}
+                  </span>
                 </td>
                 <td>{getScore()}</td>
               </tr>

@@ -36,7 +36,15 @@ const styles = {
     minHeight: "270px",
   },
   teamName: {
+    fontSize: "20pt",
+    // marginBottom: "20px",
+  },
+  captain: {
+    marginTop: "-5px",
     marginBottom: "20px",
+    fontWeight: "400",
+    fontSize: "12pt",
+    color: "#84827a",
   },
 };
 
@@ -72,6 +80,9 @@ class Teams extends React.Component<{
                   </Card.Title>
                   <Card.Title style={styles.teamName}>
                     {teamScore.team.name}
+                  </Card.Title>
+                  <Card.Title style={styles.captain}>
+                    {teamScore.team.captain}
                   </Card.Title>
                   {accoladesComponent}
                   {...[...teamScore.team.players]
