@@ -33,7 +33,7 @@ const styles = {
     color: "red",
   },
   card: {
-    minHeight: "270px",
+    minHeight: "470px",
   },
   teamName: {
     fontSize: "20pt",
