@@ -276,7 +276,7 @@ export const teams: Array<Team> = [
   },
   {
     name: "NO SPOILERS",
-    captain: "Brandon",
+    captain: "Brendan",
     accolades: {
       third: [45],
     },

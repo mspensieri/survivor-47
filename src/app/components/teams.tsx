@@ -17,27 +17,30 @@ const styles = {
     fontSize: "80pt",
   },
   accolades: {
-    fontSize: "15pt",
-    paddingTop: "10px",
-    paddingBottom: "10px",
-    marginBottom: "15px",
-    marginTop: "-10px",
+    textAlign: "center" as any,
+    position: "absolute" as any,
+    right: "10px",
+    top: "10px",
     backgroundColor: "#facf8b",
     borderRadius: "10px",
-    width: "75%",
-    marginLeft: "auto",
-    marginRight: "auto",
+    padding: "10px",
+    fontSize: "12pt",
+    lineHeight: "1",
+    fontWeight: "400",
+  },
+  medal: {
+    fontSize: "17pt",
   },
   playerEliminated: {
     textDecoration: "line-through",
     color: "red",
   },
   card: {
-    minHeight: "470px",
+    minHeight: "270px",
   },
   teamName: {
     fontSize: "20pt",
-    // marginBottom: "20px",
+    marginBottom: "20px",
   },
   captain: {
     marginTop: "-5px",
@@ -64,9 +67,21 @@ class Teams extends React.Component<{
             const { first, second, third } = teamScore.team.accolades;
             accoladesComponent = (
               <div style={styles.accolades}>
-                {first && <Card.Text>🥇 Season {first.join(", ")}</Card.Text>}
-                {second && <Card.Text>🥈 Season {second.join(", ")}</Card.Text>}
-                {third && <Card.Text>🥉 Season {third.join(", ")}</Card.Text>}
+                {first && (
+                  <Card.Text>
+                    <span style={styles.medal}>🥇</span>S{first.join(", ")}
+                  </Card.Text>
+                )}
+                {second && (
+                  <Card.Text>
+                    <span style={styles.medal}>🥈</span>S{second.join(", ")}
+                  </Card.Text>
+                )}
+                {third && (
+                  <Card.Text>
+                    <span style={styles.medal}>🥉</span>S{third.join(", ")}
+                  </Card.Text>
+                )}
               </div>
             );
           }
@@ -74,6 +89,7 @@ class Teams extends React.Component<{
           return (
             <Col key={teamScore.team.name} xs={12} sm={6} md={4} lg={3}>
               <Card className="text-center" style={styles.card}>
+                {accoladesComponent}
                 <Card.Body>
                   <Card.Title style={styles.cardNumber}>
                     {teamScore.rank === 0 ? "👑" : `#${teamScore.rank + 1}`}{" "}
@@ -81,10 +97,10 @@ class Teams extends React.Component<{
                   <Card.Title style={styles.teamName}>
                     {teamScore.team.name}
                   </Card.Title>
-                  <Card.Title style={styles.captain}>
+                  {/* <Card.Title style={styles.captain}>
                     {teamScore.team.captain}
-                  </Card.Title>
-                  {accoladesComponent}
+                  </Card.Title> 
+                   { accoladesComponent} */}
                   {...[...teamScore.team.players]
                     .sort(
                       (a, b) =>
