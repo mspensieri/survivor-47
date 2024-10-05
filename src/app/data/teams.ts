@@ -210,7 +210,7 @@ export const teams: Array<Team> = [
   },
   {
     name: "Come On In Guys",
-    captain: "Spence",
+    captain: "Spen",
     winner: RACHEL,
     players: [RACHEL, TEENY, KYLE, TK, ANDY, CAROLINE],
   },
