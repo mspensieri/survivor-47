@@ -72,6 +72,19 @@ export const weeks: Array<Partial<Record<PlayerKeys, Points>>> = [
     SUE: { teamImmunity: 1 },
     TIYANA: { teamImmunity: 1 },
   },
+  {
+    ANDY: { teamImmunity: 1, advantage: 1 },
+    ANIKA: { teamImmunity: 1 },
+    RACHEL: { teamImmunity: 1 },
+    SAM: { teamImmunity: 1 },
+    SIERRA: { teamImmunity: 1 },
+    CAROLINE: { teamImmunity: 1, advantage: 1 },
+    GABE: { teamImmunity: 1 },
+    KYLE: { teamImmunity: 1 },
+    SUE: { teamImmunity: 1, advantage: 1, idolFound: 2 },
+    TIYANA: { teamImmunity: 1 },
+    TEENY: { advantage: 1 },
+  },
 ];
 
 export function computePlayerScore(
