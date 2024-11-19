@@ -115,6 +115,10 @@ export const weeks: Array<Partial<Record<PlayerKeys, Points>>> = [
     RACHEL: { idolFound: 2 },
     SIERRA: { placement: 2 },
   },
+  {
+    GABE: { individualImmunity: 2 },
+    SOL: { placement: 2 },
+  },
 ];
 
 export function computePlayerScore(
