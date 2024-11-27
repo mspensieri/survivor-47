@@ -45,7 +45,7 @@ class Scores extends React.Component<{
           </Badge>
         );
       }
-    } else if (player.status === "winner" && weekNumber === 12) {
+    } else if (player.status === "winner" && weekNumber === 13) {
       return (
         <Badge bg="success" style={styles.badge}>
           Winner
