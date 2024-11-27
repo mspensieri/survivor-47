@@ -119,6 +119,10 @@ export const weeks: Array<Partial<Record<PlayerKeys, Points>>> = [
     GABE: { individualImmunity: 2 },
     SOL: { placement: 2 },
   },
+  {
+    KYLE: { individualImmunity: 2 },
+    GABE: { placement: 2 },
+  },
 ];
 
 export function computePlayerScore(
