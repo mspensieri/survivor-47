@@ -23,6 +23,7 @@ export const airDates = [
   "Nov 27",
   "Dec 4",
   "Dec 11",
+  "Dec 18",
 ];
 
 export const weeks: Array<Partial<Record<PlayerKeys, Points>>> = [
