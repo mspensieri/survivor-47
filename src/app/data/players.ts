@@ -48,7 +48,7 @@ export const PLAYERS: Record<PlayerKeys, Player> = {
   [PlayerKeys.SIERRA]: {
     key: PlayerKeys.SIERRA,
     name: "Sierra",
-    status: "eliminated",
+    status: "jury",
     eliminatedWeek: 7,
   },
   [PlayerKeys.RACHEL]: {
@@ -71,7 +71,7 @@ export const PLAYERS: Record<PlayerKeys, Player> = {
   [PlayerKeys.SOL]: {
     key: PlayerKeys.SOL,
     name: "Sol",
-    status: "eliminated",
+    status: "jury",
     eliminatedWeek: 8,
   },
   [PlayerKeys.KISHAN]: {
@@ -110,7 +110,8 @@ export const PLAYERS: Record<PlayerKeys, Player> = {
   [PlayerKeys.CAROLINE]: {
     key: PlayerKeys.CAROLINE,
     name: "Caroline",
-    status: "active",
+    status: "jury",
+    eliminatedWeek: 11,
   },
   [PlayerKeys.TK]: {
     key: PlayerKeys.TK,
@@ -121,13 +122,13 @@ export const PLAYERS: Record<PlayerKeys, Player> = {
   [PlayerKeys.GABE]: {
     key: PlayerKeys.GABE,
     name: "Gabe",
-    status: "eliminated",
+    status: "jury",
     eliminatedWeek: 9,
   },
   [PlayerKeys.KYLE]: {
     key: PlayerKeys.KYLE,
     name: "Kyle",
-    status: "eliminated",
+    status: "jury",
     eliminatedWeek: 10,
   },
 };
